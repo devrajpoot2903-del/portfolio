@@ -1,0 +1,14 @@
+/* Responsive breakpoints */
+
+/* Empty media query structure */
+@media (max-width: 1024px) {
+    /* Tablet & Desktop */
+}
+
+@media (max-width: 768px) {
+    /* Tablet */
+}
+
+@media (max-width: 480px) {
+    /* Mobile */
+}

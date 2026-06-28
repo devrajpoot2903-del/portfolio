@@ -1,0 +1,6 @@
+/* Empty animation placeholders */
+
+/* Common transition utilities */
+.transition-standard {
+    transition: all 0.3s ease;
+}

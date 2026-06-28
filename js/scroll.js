@@ -1,0 +1,1 @@
+// Placeholder smooth scrolling logic

@@ -1,0 +1,42 @@
+/* CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Root color variables */
+:root {
+    --bg-dark: #121212;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: sans-serif;
+}
+
+/* Global typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+/* Utility classes */
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+/* Container class */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
