@@ -1,19 +1,713 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#0d0e12',
+                        navBg: '#12141c',
+                        border: '#222222',
+                        muted: '#a1a1aa',
+                        accent: '#a5c0ff',
+                        accentHover: '#8fb0ff',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body>
-    <!-- Portfolio content will be developed here -->
+
+<body class="bg-background text-white font-sans antialiased selection:bg-accent selection:text-background">
+
+    <!-- Navigation Section -->
+    <header class="fixed top-0 w-full z-50 bg-navBg border-b border-[#1f222e]">
+        <div class="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="font-mono text-[14px] font-bold tracking-wide text-white uppercase">
+                DEV RAJPOOT
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-10 text-[14px] font-medium">
+                <a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-white transition-colors">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:text-white transition-colors">Projects</a>
+                <a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+                <a href="#"
+                    class="bg-accent text-navBg px-5 py-2 rounded-sm font-mono text-[13px] font-semibold hover:bg-accentHover transition-colors">Resume</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle Placeholder -->
+            <button class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+
+        <!-- Hero Section -->
+        <section id="hero"
+            class="min-h-[calc(100vh-5rem)] flex flex-col items-center justify-center text-center px-6 relative">
+
+            <!-- Availability Badge -->
+            <div class="inline-flex items-center px-4 py-1.5 rounded-full border border-white/10 bg-white/[0.02] mb-8">
+                <span class="text-[10px] font-bold tracking-[0.25em] text-accent uppercase opacity-90">AVAILABLE FOR
+                    OPPORTUNITIES</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-6xl md:text-[5.5rem] font-bold tracking-tight mb-4 text-white leading-none">
+                Dev Rajpoot
+            </h1>
+
+            <!-- Subheading -->
+            <h2 class="text-2xl md:text-3xl font-semibold text-accent mb-8 max-w-4xl leading-tight">
+                MERN Stack Developer | AI Enthusiast | Computer <br class="hidden md:block">
+                Science Engineering Student
+            </h2>
+
+            <!-- Description -->
+            <p class="text-gray-400 text-base md:text-lg max-w-2xl mb-12 leading-relaxed">
+                Building modern web applications and AI-powered solutions focused on <br class="hidden md:block">
+                solving real-world problems through clean code and innovative design.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center gap-6">
+                <a href="#projects"
+                    class="w-full sm:w-auto px-8 py-3.5 rounded bg-accent hover:bg-accentHover text-[#0d0e12] font-semibold transition-colors">
+                    View Projects
+                </a>
+                <a href="#"
+                    class="w-full sm:w-auto px-8 py-3.5 rounded border border-white/10 bg-white/[0.02] hover:bg-white/5 text-white font-medium transition-colors">
+                    Download Resume
+                </a>
+                <a href="#contact"
+                    class="font-mono text-[13px] text-accent tracking-wider sm:ml-2 border-b border-accent pb-0.5 hover:text-accentHover hover:border-accentHover transition-colors">
+                    Contact Me
+                </a>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-gray-500">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 relative z-10 bg-[#09090b] border-t border-[#1f222e]/50">
+            <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-16 lg:gap-24">
+
+                <!-- Left Column: Image -->
+                <div class="w-full md:w-5/12 relative">
+                    <!-- Image Container -->
+                    <div class="aspect-[4/5] rounded overflow-hidden border border-[#1f222e] bg-[#12141c] relative">
+                        <!-- Profile Image -->
+                        <img src="assets/images/IMG-20260409-WA0023.jpg" alt="Dev Rajpoot"
+                            class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Floating Card -->
+                    <div
+                        class="absolute -bottom-4 -right-4 md:-right-6 bg-[#0f1115] border border-[#1f222e] rounded p-4 shadow-2xl min-w-[130px]">
+                        <div class="text-3xl font-bold text-accent mb-1 leading-none">4+</div>
+                        <div class="text-[9px] font-mono tracking-widest text-gray-400 uppercase leading-relaxed">
+                            Programming<br>Languages
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Content -->
+                <div class="w-full md:w-7/12 mt-12 md:mt-0">
+                    <!-- Heading -->
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-[2px] h-10 bg-accent"></div>
+                        <h2 class="text-4xl md:text-5xl font-bold text-white leading-none">About Me</h2>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="text-gray-400 text-[15px] md:text-[16px] leading-[1.8] mb-10 max-w-2xl">
+                        I am a passionate Full Stack Developer currently pursuing my B.Tech in Computer Science
+                        Engineering at the Oriental Institute of Science and Technology. My journey in tech is driven by
+                        curiosity and a relentless desire to build things that matter.
+                    </p>
+
+                    <!-- Feature Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <!-- Card 1 -->
+                        <div class="bg-[#0f1115] border border-[#1f222e] rounded p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="text-accent">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-white font-semibold text-lg">MERN Stack</h3>
+                            </div>
+                            <p class="text-gray-400 text-[13px] leading-relaxed">
+                                Expertise in MongoDB, Express, React, and Node.js for scalable web apps.
+                            </p>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="bg-[#0f1115] border border-[#1f222e] rounded p-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="text-[#10b981]">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-white font-semibold text-lg">AI Integration</h3>
+                            </div>
+                            <p class="text-gray-400 text-[13px] leading-relaxed">
+                                Integrating LLMs like Gemini and OpenAI to create intelligent interfaces.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Arsenal Section -->
+        <section id="skills" class="py-24 bg-background relative z-10 border-t border-[#1f222e]/50">
+            <div class="max-w-5xl mx-auto px-6">
+
+                <!-- Section Header -->
+                <div class="flex flex-col items-center mb-16">
+                    <h2 class="text-[34px] md:text-4xl font-bold text-white mb-5 tracking-tight">Technical Arsenal</h2>
+                    <div class="w-12 h-[2px] bg-accent"></div>
+                </div>
+
+                <!-- Grid Container -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+
+                    <!-- Item 1: C++ -->
+                    <div
+                        class="flex flex-col items-center justify-center py-10 border border-[#1f222e] bg-[#0c0d11] hover:bg-white/[0.02] transition-colors rounded-sm">
+                        <div class="w-14 h-14 bg-[#161821] rounded-md flex items-center justify-center mb-5">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <span class="font-mono text-[13px] font-medium text-gray-200">C++</span>
+                    </div>
+
+                    <!-- Item 2: JavaScript -->
+                    <div
+                        class="flex flex-col items-center justify-center py-10 border border-[#1f222e] bg-[#0c0d11] hover:bg-white/[0.02] transition-colors rounded-sm">
+                        <div class="w-14 h-14 bg-[#161821] rounded-md flex items-center justify-center mb-5">
+                            <span class="font-bold text-white text-[15px] tracking-wider">JS</span>
+                        </div>
+                        <span class="font-mono text-[13px] font-medium text-gray-200">JavaScript</span>
+                    </div>
+
+                    <!-- Item 3: Python -->
+                    <div
+                        class="flex flex-col items-center justify-center py-10 border border-[#1f222e] bg-[#0c0d11] hover:bg-white/[0.02] transition-colors rounded-sm">
+                        <div class="w-14 h-14 bg-[#161821] rounded-md flex items-center justify-center mb-5">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="4 17 10 11 4 5" />
+                                <line x1="12" x2="20" y1="19" y2="19" />
+                            </svg>
+                        </div>
+                        <span class="font-mono text-[13px] font-medium text-gray-200">Python</span>
+                    </div>
+
+                    <!-- Item 4: MongoDB -->
+                    <div
+                        class="flex flex-col items-center justify-center py-10 border border-[#1f222e] bg-[#0c0d11] hover:bg-white/[0.02] transition-colors rounded-sm">
+                        <div class="w-14 h-14 bg-[#161821] rounded-md flex items-center justify-center mb-5">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                <path d="M3 5V19A9 3 0 0 0 21 19V5" />
+                                <path d="M3 12A9 3 0 0 0 21 12" />
+                            </svg>
+                        </div>
+                        <span class="font-mono text-[13px] font-medium text-gray-200">MongoDB</span>
+                    </div>
+
+                    <!-- Item 5: React -->
+                    <div
+                        class="flex flex-col items-center justify-center py-10 border border-[#1f222e] bg-[#0c0d11] hover:bg-white/[0.02] transition-colors rounded-sm">
+                        <div class="w-14 h-14 bg-[#161821] rounded-md flex items-center justify-center mb-5">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="18" height="18" x="3" y="3" rx="2" />
+                                <path d="M3 9h18" />
+                                <path d="M9 21V9" />
+                            </svg>
+                        </div>
+                        <span class="font-mono text-[13px] font-medium text-gray-200">React</span>
+                    </div>
+
+                    <!-- Item 6: Node.js -->
+                    <div
+                        class="flex flex-col items-center justify-center py-10 border border-[#1f222e] bg-[#0c0d11] hover:bg-white/[0.02] transition-colors rounded-sm">
+                        <div class="w-14 h-14 bg-[#161821] rounded-md flex items-center justify-center mb-5">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="6" height="6" x="9" y="3" rx="1" />
+                                <rect width="6" height="6" x="2" y="15" rx="1" />
+                                <rect width="6" height="6" x="16" y="15" rx="1" />
+                                <path d="M12 9v3" />
+                                <path d="M5 15v-1a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1" />
+                            </svg>
+                        </div>
+                        <span class="font-mono text-[13px] font-medium text-gray-200">Node.js</span>
+                    </div>
+
+                    <!-- Item 7: Tailwind -->
+                    <div
+                        class="flex flex-col items-center justify-center py-10 border border-[#1f222e] bg-[#0c0d11] hover:bg-white/[0.02] transition-colors rounded-sm">
+                        <div class="w-14 h-14 bg-[#161821] rounded-md flex items-center justify-center mb-5">
+                            <span class="font-bold text-white text-[13px] tracking-widest uppercase">CSS</span>
+                        </div>
+                        <span class="font-mono text-[13px] font-medium text-gray-200">Tailwind</span>
+                    </div>
+
+                    <!-- Item 8: Git/GitHub -->
+                    <div
+                        class="flex flex-col items-center justify-center py-10 border border-[#1f222e] bg-[#0c0d11] hover:bg-white/[0.02] transition-colors rounded-sm">
+                        <div class="w-14 h-14 bg-[#161821] rounded-md flex items-center justify-center mb-5">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="5" cy="12" r="1.5" />
+                                <circle cx="10" cy="12" r="1.5" />
+                                <circle cx="15" cy="12" r="1.5" />
+                                <circle cx="20" cy="12" r="1.5" />
+                            </svg>
+                        </div>
+                        <span class="font-mono text-[13px] font-medium text-gray-200">Git/GitHub</span>
+                    </div>
+
+                    <!-- Item 9: Postman -->
+                    <div
+                        class="flex flex-col items-center justify-center py-10 border border-[#1f222e] bg-[#0c0d11] hover:bg-white/[0.02] transition-colors rounded-sm">
+                        <div class="w-14 h-14 bg-[#161821] rounded-md flex items-center justify-center mb-5">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m7.5 4.27 9 5.15" />
+                                <path
+                                    d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+                                <path d="m3.3 7 8.7 5 8.7-5" />
+                                <path d="M12 22V12" />
+                            </svg>
+                        </div>
+                        <span class="font-mono text-[13px] font-medium text-gray-200">Postman</span>
+                    </div>
+
+                    <!-- Item 10: Antigravity -->
+                    <div
+                        class="flex flex-col items-center justify-center py-10 border border-[#1f222e] bg-[#0c0d11] hover:bg-white/[0.02] transition-colors rounded-sm">
+                        <div class="w-14 h-14 bg-[#161821] rounded-md flex items-center justify-center mb-5">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(45 12 12)" />
+                                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-45 12 12)" />
+                                <circle cx="12" cy="12" r="2" />
+                            </svg>
+                        </div>
+                        <span class="font-mono text-[13px] font-medium text-gray-200">Antigravity</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="projects" class="py-24 relative z-10 bg-[#09090b] border-t border-[#1f222e]/50">
+            <div class="max-w-6xl mx-auto px-6">
+
+                <!-- Section Header -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                    <div>
+                        <h2 class="text-[34px] md:text-5xl font-bold text-white mb-3 tracking-tight">Featured Projects
+                        </h2>
+                        <p class="text-gray-400 text-[14px] md:text-[15px]">Selected works that showcase my technical
+                            capabilities.</p>
+                    </div>
+                    <div class="font-mono text-gray-500 text-[11px] font-bold tracking-widest uppercase">
+                        04 / 04 PROJECTS
+                    </div>
+                </div>
+
+                <!-- Top Row: Large Projects -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+
+                    <!-- Project 1: Eco Voice -->
+                    <div
+                        class="bg-[#0c0d11] border border-[#1f222e] rounded-xl overflow-hidden group hover:border-[#33384a] transition-colors">
+                        <!-- Image Container -->
+                        <div
+                            class="relative h-[280px] md:h-[320px] bg-[#0c1015] overflow-hidden border-b border-[#1f222e]">
+                            <div
+                                class="absolute top-5 left-5 z-10 bg-emerald-400 text-[#0c0d11] text-[10px] font-bold tracking-widest px-3 py-1 rounded-full uppercase">
+                                Active
+                            </div>
+                            <!-- Image Placeholder (Add img tag here when available) -->
+                            <div
+                                class="absolute inset-0 flex items-center justify-center text-xs font-mono text-emerald-500/50 bg-gradient-to-b from-[#081820] to-[#0c0d11]">
+                                [Eco Voice UI Screenshot]
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-white mb-3 tracking-tight">Eco Voice</h3>
+                            <p class="text-gray-400 text-[14px] leading-[1.8] mb-8 min-h-[50px]">
+                                A voice-first AI task management platform designed for accessibility and high
+                                productivity, leveraging cutting-edge speech recognition.
+                            </p>
+                            <!-- Tags -->
+                            <div class="flex flex-wrap gap-2 mb-8">
+                                <span
+                                    class="px-3 py-1.5 bg-[#12141c] border border-[#1f222e] text-gray-300 text-[11px] font-mono rounded-sm">MERN</span>
+                                <span
+                                    class="px-3 py-1.5 bg-[#12141c] border border-[#1f222e] text-gray-300 text-[11px] font-mono rounded-sm">OpenAI
+                                    Whisper</span>
+                                <span
+                                    class="px-3 py-1.5 bg-[#12141c] border border-[#1f222e] text-gray-300 text-[11px] font-mono rounded-sm">Web
+                                    Sockets</span>
+                            </div>
+                            <!-- Links -->
+                            <div class="flex items-center gap-6">
+                                <a href="#"
+                                    class="text-gray-300 hover:text-white flex items-center gap-1.5 text-[13px] font-semibold transition-colors">
+                                    Live Demo
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        stroke-width="2.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M7 17L17 7M17 7H7M17 7V17"></path>
+                                    </svg>
+                                </a>
+                                <a href="#"
+                                    class="text-gray-300 hover:text-white flex items-center gap-1.5 text-[13px] font-semibold transition-colors">
+                                    GitHub
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        stroke-width="2.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Career Compass AI -->
+                    <div
+                        class="bg-[#0c0d11] border border-[#1f222e] rounded-xl overflow-hidden group hover:border-[#33384a] transition-colors">
+                        <!-- Image Container -->
+                        <div
+                            class="relative h-[280px] md:h-[320px] bg-[#12141c] flex items-center justify-center border-b border-[#1f222e]">
+                            <div
+                                class="border border-[#2d3342] text-gray-300 text-[11px] font-bold tracking-widest px-6 py-2.5 rounded-sm uppercase bg-[#161821]/80">
+                                Coming Soon
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-white mb-3 tracking-tight">Career Compass AI</h3>
+                            <p class="text-gray-400 text-[14px] leading-[1.8] mb-8 min-h-[50px]">
+                                AI-powered career guidance using Gemini AI to map student skills to industry demands.
+                            </p>
+                            <!-- Tags -->
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1.5 bg-[#12141c] border border-[#1f222e] text-gray-300 text-[11px] font-mono rounded-sm">React</span>
+                                <span
+                                    class="px-3 py-1.5 bg-[#12141c] border border-[#1f222e] text-gray-300 text-[11px] font-mono rounded-sm">Gemini
+                                    Pro</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Bottom Row: Small Projects -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <!-- Project 3: Jarvis -->
+                    <div
+                        class="bg-[#0c0d11] border border-[#1f222e] rounded-xl p-8 relative overflow-hidden group hover:border-[#33384a] transition-colors flex flex-col justify-between">
+                        <!-- Accent Border -->
+                        <div class="absolute left-0 top-0 bottom-0 w-1 bg-emerald-400"></div>
+
+                        <div>
+                            <div class="flex items-center justify-between mb-8">
+                                <div class="text-emerald-400">
+                                    <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 8V4H8" />
+                                        <rect width="16" height="12" x="4" y="8" rx="2" />
+                                        <path d="M2 14h2" />
+                                        <path d="M20 14h2" />
+                                        <path d="M15 13v2" />
+                                        <path d="M9 13v2" />
+                                    </svg>
+                                </div>
+                                <a href="#"
+                                    class="w-10 h-10 rounded border border-[#1f222e] flex items-center justify-center text-gray-400 hover:text-white hover:border-white/30 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        stroke-width="2.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <h3 class="text-[22px] font-bold text-white mb-3 tracking-tight">Jarvis Desktop Assistant
+                            </h3>
+                            <p class="text-gray-400 text-[14px] leading-[1.8] mb-8">
+                                Personalized Python-based voice assistant featuring speech recognition and automation
+                                triggers for daily workflows.
+                            </p>
+                        </div>
+
+                        <div class="font-mono text-[10px] font-bold tracking-widest uppercase text-emerald-400">
+                            PYTHON • SPEECH REC • OS-LIB
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Netflix Clone -->
+                    <div
+                        class="bg-[#0c0d11] border border-[#1f222e] rounded-xl p-8 relative overflow-hidden group hover:border-[#33384a] transition-colors flex flex-col justify-between">
+                        <!-- Accent Border -->
+                        <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-400"></div>
+
+                        <div>
+                            <div class="flex items-center justify-between mb-8">
+                                <div class="text-blue-400">
+                                    <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="7" width="20" height="15" rx="2" ry="2" />
+                                        <polyline points="17 2 12 7 7 2" />
+                                    </svg>
+                                </div>
+                                <a href="#"
+                                    class="w-10 h-10 rounded border border-[#1f222e] flex items-center justify-center text-gray-400 hover:text-white hover:border-white/30 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        stroke-width="2.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M7 17L17 7M17 7H7M17 7V17"></path>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <h3 class="text-[22px] font-bold text-white mb-3 tracking-tight">Netflix Clone</h3>
+                            <p class="text-gray-400 text-[14px] leading-[1.8] mb-8">
+                                Pixel-perfect landing page clone showcasing mastery of modern CSS architectures and
+                                responsive design patterns.
+                            </p>
+                        </div>
+
+                        <div class="font-mono text-[10px] font-bold tracking-widest uppercase text-blue-400">
+                            HTML5 • CSS3 • JAVASCRIPT
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Education & Certifications Section -->
+        <section id="education" class="py-24 bg-[#1a1d27] relative z-10 border-t border-[#1f222e]/50">
+            <div class="max-w-6xl mx-auto px-6">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-8">
+
+                    <!-- Left Column: Education -->
+                    <div class="pr-0 md:pr-12">
+                        <h2 class="text-[32px] md:text-4xl font-bold text-white mb-10 tracking-tight">Education</h2>
+
+                        <div class="relative pl-6 border-l border-[#2a2d3d]/50 ml-1.5 mt-2 pb-2">
+                            <!-- Timeline Dot -->
+                            <div
+                                class="absolute w-2.5 h-2.5 bg-accent rounded-full -left-[5.5px] top-1.5 shadow-[0_0_10px_rgba(130,149,255,0.4)]">
+                            </div>
+
+                            <!-- Content -->
+                            <div class="mb-3">
+                                <span class="font-mono text-[10px] font-bold tracking-[0.2em] text-accent uppercase">
+                                    2024 — PRESENT
+                                </span>
+                            </div>
+                            <h3 class="text-[19px] font-bold text-gray-100 mb-1">Bachelor of Technology in CSE</h3>
+                            <p class="text-gray-300 text-[14px] mb-3">Oriental Institute of Science and Technology</p>
+                            <p class="text-gray-400 text-[13px] italic leading-relaxed max-w-sm">
+                                Focused on Software Architecture, AI Fundamentals, and Distributed Systems.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Certifications -->
+                    <div>
+                        <h2 class="text-[32px] md:text-4xl font-bold text-white mb-10 tracking-tight">Certifications
+                        </h2>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+                            <!-- Certification 1 -->
+                            <div
+                                class="bg-[#0c0d11] p-6 rounded flex flex-col justify-between border border-[#1f222e] hover:border-[#33384a] transition-colors">
+                                <div
+                                    class="w-10 h-10 rounded bg-[#10241b] text-emerald-400 flex items-center justify-center mb-8">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+                                        <path d="m9 12 2 2 4-4" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-[15px] font-bold text-white mb-2 tracking-wide">NPTEL Certification
+                                    </h3>
+                                    <p class="font-mono text-[9px] font-bold tracking-widest text-gray-400 uppercase">
+                                        PROGRAMMING & ALGORITHMS
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Certification 2 -->
+                            <div
+                                class="bg-[#0c0d11] p-6 rounded flex flex-col justify-between border border-[#1f222e] hover:border-[#33384a] transition-colors">
+                                <div
+                                    class="w-10 h-10 rounded bg-[#161821] text-[#8295ff] flex items-center justify-center mb-8">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                        <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-[15px] font-bold text-white mb-2 tracking-wide">Infosys Springboard
+                                    </h3>
+                                    <p class="font-mono text-[9px] font-bold tracking-widest text-gray-400 uppercase">
+                                        FULL STACK FOUNDATIONS
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-32 relative z-10 bg-[#09090b] border-t border-[#1f222e]/50">
+            <div class="max-w-6xl mx-auto px-6">
+                <!-- Contact Card -->
+                <div
+                    class="bg-gradient-to-br from-[#12141c] to-[#09090b] border border-[#1f222e] rounded-3xl p-10 md:p-16 lg:p-20 shadow-2xl relative overflow-hidden">
+                    <!-- Subtle top glare for depth -->
+                    <div
+                        class="absolute top-0 right-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent">
+                    </div>
+
+                    <h2
+                        class="text-4xl md:text-[56px] lg:text-[64px] font-bold text-white leading-[1.1] mb-8 tracking-tight">
+                        Ready to build <br>
+                        something <br>
+                        <span class="text-accent italic">extraordinary?</span>
+                    </h2>
+
+                    <p class="text-gray-400 text-[15px] md:text-base leading-[1.8] max-w-xl mb-12">
+                        I'm currently looking for internships and collaborative projects. Whether you have a question or
+                        just want to say hi, my inbox is always open.
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-8">
+                        <a href="mailto:contact@example.com"
+                            class="px-8 py-3.5 bg-accent hover:bg-accentHover text-[#0d0e12] font-semibold tracking-wide rounded text-[14px] transition-colors">
+                            Let's Talk
+                        </a>
+                        <div class="flex items-center gap-5 text-gray-400">
+                            <a href="#" class="hover:text-white transition-colors" title="Email">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="4" />
+                                    <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4.2 8.2" />
+                                </svg>
+                            </a>
+                            <a href="#" class="hover:text-white transition-colors" title="Links">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                                </svg>
+                            </a>
+                            <a href="#" class="hover:text-white transition-colors" title="Terminal">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                                    <polyline points="7 11 9 13 7 15" />
+                                    <line x1="13" y1="15" x2="17" y2="15" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-[#050507] border-t border-[#1f222e]/60 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="text-2xl md:text-3xl font-bold text-white tracking-tight">DR.</div>
+
+            <div
+                class="font-mono text-[11px] md:text-[13px] font-bold tracking-[0.2em] text-emerald-400 uppercase text-center">
+                @ 2026 Dev Rajpoot. Built with MERN Stack.
+            </div>
+
+            <div
+                class="flex items-center gap-6 font-mono text-[13px] md:text-[14px] font-medium tracking-wide text-gray-400">
+                <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+                <a href="#" class="hover:text-white transition-colors">GitHub</a>
+                <a href="#" class="hover:text-white transition-colors">Email</a>
+            </div>
+        </div>
+    </footer>
 
     <!-- JS Files -->
     <script src="js/animations.js"></script>
@@ -23,4 +717,5 @@
     <script src="js/projects.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
