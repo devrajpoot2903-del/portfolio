@@ -4,10 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    // Create a context to manage all animations and prevent memory leaks
-    let ctx = gsap.context(() => {
+    // Create a MatchMedia instance to handle prefers-reduced-motion accessibility
+    let mm = gsap.matchMedia();
+
+    // Only run animations if the user has not requested reduced motion
+    mm.add("(prefers-reduced-motion: no-preference)", () => {
         
-        // 1. Navbar: Fade from top. Duration 0.6s. Very subtle.
+        // 1. Navbar: Fade from top. Duration 0.6s.
         gsap.from("header", {
             y: -15,
             opacity: 0,
@@ -212,5 +215,5 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-    }); // End context
+    }); // End matchMedia
 });

@@ -139,3 +139,18 @@ footer a:hover svg {
     transform: translateY(-4px);
     box-shadow: 0 16px 32px -12px rgba(0, 0, 0, 0.5);
 }
+
+/* =========================================
+   Phase 4.5: Accessibility / Motion Polish
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
