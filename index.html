@@ -75,8 +75,14 @@
 
         <!-- Hero Section -->
         <section id="hero"
-            class="min-h-[calc(100vh-5rem)] flex flex-col items-center justify-center text-center px-6 relative">
-
+            class="min-h-[calc(100vh-5rem)] flex flex-col items-center justify-center text-center px-6 relative overflow-hidden">
+            
+            <!-- Subtle Decorative Background -->
+            <div id="hero-bg-glow" class="absolute inset-0 z-0 pointer-events-none opacity-30" style="background: radial-gradient(circle at 50% 50%, rgba(165, 192, 255, 0.08) 0%, transparent 60%);"></div>
+            
+            <!-- Content Wrapper to stay above background -->
+            <div class="relative z-10 flex flex-col items-center">
+            
             <!-- Availability Badge -->
             <div class="inline-flex items-center px-4 py-1.5 rounded-full border border-white/10 bg-white/[0.02] mb-8">
                 <span class="text-[10px] font-bold tracking-[0.25em] text-accent uppercase opacity-90">AVAILABLE FOR
@@ -115,6 +121,8 @@
                     Contact Me
                 </a>
             </div>
+
+            </div> <!-- End Content Wrapper -->
 
             <!-- Scroll Indicator -->
             <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-gray-500">
@@ -708,6 +716,10 @@
             </div>
         </div>
     </footer>
+
+    <!-- Animation Libraries (Phase 4.1) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <!-- JS Files -->
     <script src="js/animations.js"></script>

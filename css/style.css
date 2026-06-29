@@ -40,3 +40,102 @@ h1, h2, h3, h4, h5, h6 {
 html {
     scroll-behavior: smooth;
 }
+
+/* Premium Button Hovers (Phase 4.2) */
+#hero .flex-col.sm\:flex-row a.rounded {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
+}
+
+#hero .flex-col.sm\:flex-row a.rounded:hover {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.3);
+}
+
+/* Premium Project Showcase Hovers (Phase 4.3) */
+#projects .group {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+#projects .group:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Image container soft zoom */
+#projects .group .relative.border-b {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#projects .group:hover .relative.border-b {
+    transform: scale(1.03);
+}
+
+/* Project Links (Live Demo & GitHub) Hover */
+#projects .flex.items-center.gap-6 a {
+    display: inline-flex;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease, color 0.3s ease;
+}
+
+#projects .flex.items-center.gap-6 a:hover {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.15));
+}
+
+/* =========================================
+   Phase 4.4: Premium Micro Interactions
+========================================= */
+
+/* Navbar Active Underline */
+nav a[href^='#'] {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a[href^='#']::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #a5c0ff; /* accent color */
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+nav a[href^='#']:hover::after,
+nav a[href^='#'].nav-active::after {
+    width: 100%;
+}
+
+/* Icon Interactions (Social Links) */
+footer a svg {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+footer a:hover svg {
+    transform: scale(1.05) translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Profile Image Subtle Lift */
+#about .aspect-\[4\/5\] {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#about .aspect-\[4\/5\]:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Global Consistent Card Hovers (Skills & Education) */
+/* (Projects are already handled above with same timing) */
+#skills .grid > div,
+#education .grid > div {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#skills .grid > div:hover,
+#education .grid > div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px -12px rgba(0, 0, 0, 0.5);
+}
