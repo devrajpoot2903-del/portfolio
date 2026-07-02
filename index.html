@@ -4,7 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Dev Rajpoot | MERN Stack Developer Portfolio</title>
+    <meta name="title" content="Dev Rajpoot | MERN Stack Developer Portfolio">
+    <meta name="description"
+        content="Portfolio of Dev Rajpoot, a passionate MERN Stack Developer specializing in React, Node.js, and modern web architectures.">
+    <meta name="keywords"
+        content="Dev Rajpoot, MERN Stack Developer, React Developer, Web Developer Portfolio, Frontend Developer, Backend Developer">
+    <meta name="author" content="Dev Rajpoot">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0c0d11">
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://devrajpoot.com/">
+    <meta property="og:title" content="Dev Rajpoot | MERN Stack Developer Portfolio">
+    <meta property="og:description"
+        content="Portfolio of Dev Rajpoot, a passionate MERN Stack Developer specializing in React, Node.js, and modern web architectures.">
+    <meta property="og:image" content="https://devrajpoot.com/assets/images/og-preview.png">
+    <meta property="og:site_name" content="Dev Rajpoot Portfolio">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://devrajpoot.com/">
+    <meta property="twitter:title" content="Dev Rajpoot | MERN Stack Developer Portfolio">
+    <meta property="twitter:description"
+        content="Portfolio of Dev Rajpoot, a passionate MERN Stack Developer specializing in React, Node.js, and modern web architectures.">
+    <meta property="twitter:image" content="https://devrajpoot.com/assets/images/og-preview.png">
+
+    <!-- SEO & PWA Support -->
+    <link rel="canonical" href="https://devrajpoot.com/">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/favicon.ico">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -52,16 +84,21 @@
 
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center gap-10 text-[14px] font-medium">
-                <a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a>
-                <a href="#skills" class="text-gray-300 hover:text-white transition-colors">Skills</a>
-                <a href="#projects" class="text-gray-300 hover:text-white transition-colors">Projects</a>
-                <a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a>
-                <a href="assets/resume/Dev_Rajpoot_Resume.pdf" target="_blank" rel="noopener noreferrer"
+                <a href="#about"
+                    class="relative text-gray-300 hover:text-white transition-colors duration-300 after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-out after:duration-300 after:bg-white">About</a>
+                <a href="#skills"
+                    class="relative text-gray-300 hover:text-white transition-colors duration-300 after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-out after:duration-300 after:bg-white">Skills</a>
+                <a href="#projects"
+                    class="relative text-gray-300 hover:text-white transition-colors duration-300 after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-out after:duration-300 after:bg-white">Projects</a>
+                <a href="#contact"
+                    class="relative text-gray-300 hover:text-white transition-colors duration-300 after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-out after:duration-300 after:bg-white">Contact</a>
+                <a href="assets/resume/Dev_Rajpoot_Resume_1.pdf" target="_blank" rel="noopener noreferrer"
                     class="bg-accent text-navBg px-5 py-2 rounded-sm font-mono text-[13px] font-semibold hover:bg-accentHover transition-colors">Resume</a>
             </nav>
 
             <!-- Mobile Menu Toggle Placeholder -->
-            <button class="md:hidden text-white focus:outline-none">
+            <button aria-label="Toggle Mobile Menu"
+                class="md:hidden text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
                     </path>
@@ -115,7 +152,7 @@
                         class="w-full sm:w-auto px-8 py-3.5 rounded bg-accent hover:bg-accentHover text-[#0d0e12] font-semibold transition-colors">
                         View Projects
                     </a>
-                    <a href="assets/resume/Dev_Rajpoot_Resume.pdf" target="_blank" rel="noopener noreferrer"
+                    <a href="assets/resume/Dev_Rajpoot_Resume_1.pdf" target="_blank" rel="noopener noreferrer"
                         class="w-full sm:w-auto px-8 py-3.5 rounded border border-white/10 bg-white/[0.02] hover:bg-white/5 text-white font-medium transition-colors">
                         Download Resume
                     </a>
@@ -310,7 +347,7 @@
                         <div class="w-14 h-14 bg-[#161821] rounded-md flex items-center justify-center mb-5">
                             <span class="font-bold text-white text-[13px] tracking-widest uppercase">CSS</span>
                         </div>
-                        <span class="font-mono text-[13px] font-medium text-gray-200">Tailwind</span>
+                        <span class="font-mono text-[13px] font-medium text-gray-200">Tailwind CSS</span>
                     </div>
 
                     <!-- Item 8: Git/GitHub -->
@@ -383,8 +420,8 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 
                     <!-- Project 1: Eco Voice -->
-                    <div
-                        class="bg-[#0c0d11] border border-[#1f222e] rounded-xl overflow-hidden group hover:border-[#33384a] transition-colors">
+                    <a href="https://eco-voice-red.vercel.app/" target="_blank" rel="noopener noreferrer"
+                        class="block bg-[#0c0d11] border border-[#1f222e] rounded-xl overflow-hidden group hover:border-white/20 hover:-translate-y-3 hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(255,255,255,0.05)] transition-all duration-300 ease-out relative cursor-pointer z-10 hover:z-20">
                         <!-- Image Container -->
                         <div
                             class="relative h-[280px] md:h-[320px] bg-[#0c1015] overflow-hidden border-b border-[#1f222e]">
@@ -393,12 +430,14 @@
                                 Active
                             </div>
                             <!-- Project Image -->
-                            <img src="assets/images/Eco-Voice.png" alt="Eco Voice" loading="lazy"
-                                class="absolute inset-0 w-full h-full object-cover">
+                            <img src="assets/images/Eco-Voice.png" alt="Eco Voice UI Interface" loading="lazy"
+                                class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <!-- Content -->
                         <div class="p-8">
-                            <h3 class="text-2xl font-bold text-white mb-3 tracking-tight">Eco Voice</h3>
+                            <h3
+                                class="text-2xl font-bold text-gray-200 group-hover:text-white transition-colors mb-3 tracking-tight">
+                                Eco Voice</h3>
                             <p class="text-gray-400 text-[14px] leading-[1.8] mb-8 min-h-[50px]">
                                 A voice-first AI task management platform designed for accessibility and high
                                 productivity, leveraging cutting-edge speech recognition.
@@ -415,55 +454,76 @@
                                     Sockets</span>
                             </div>
                             <!-- Links -->
-                            <div class="flex items-center gap-6">
-                                <a href="https://eco-voice-red.vercel.app/" target="_blank" rel="noopener noreferrer"
-                                    class="text-gray-300 hover:text-white flex items-center gap-1.5 text-[13px] font-semibold transition-colors">
+                            <div class="flex items-center gap-6 relative z-10">
+                                <button
+                                    onclick="window.open('https://eco-voice-red.vercel.app/', '_blank'); event.preventDefault(); event.stopPropagation();"
+                                    aria-label="Live Demo for Eco Voice"
+                                    class="text-gray-300 hover:text-white flex items-center gap-1.5 text-[13px] font-semibold transition-colors cursor-pointer group/btn focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded">
                                     Live Demo
-                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                        stroke-width="2.5">
+                                    <svg class="w-3.5 h-3.5 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M7 17L17 7M17 7H7M17 7V17"></path>
                                     </svg>
-                                </a>
-                                <a href="https://github.com/devrajpoot2903-del/Eco-voice-" target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="text-gray-300 hover:text-white flex items-center gap-1.5 text-[13px] font-semibold transition-colors">
+                                </button>
+                                <button
+                                    onclick="window.open('https://github.com/devrajpoot2903-del/Eco-voice-', '_blank'); event.preventDefault(); event.stopPropagation();"
+                                    aria-label="GitHub Repository for Eco Voice"
+                                    class="text-gray-300 hover:text-white flex items-center gap-1.5 text-[13px] font-semibold transition-colors cursor-pointer group/btn focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded">
                                     GitHub
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                        stroke-width="2.5">
+                                    <svg class="w-4 h-4 group-hover/btn:scale-110 transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                                     </svg>
-                                </a>
+                                </button>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Project 2: Career Compass AI -->
-                    <div
-                        class="bg-[#0c0d11] border border-[#1f222e] rounded-xl overflow-hidden group hover:border-[#33384a] transition-colors">
+                    <a href="https://github.com/devrajpoot2903-del/career-compass-ai" target="_blank"
+                        rel="noopener noreferrer"
+                        class="block bg-[#0c0d11] border border-[#1f222e] rounded-xl overflow-hidden group hover:border-white/20 hover:-translate-y-3 hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(255,255,255,0.05)] transition-all duration-300 ease-out relative cursor-pointer z-10 hover:z-20">
                         <!-- Image Container -->
                         <div
                             class="relative h-[280px] md:h-[320px] bg-[#12141c] overflow-hidden border-b border-[#1f222e]">
-                            <img src="assets/images/Career_compass_AI.png" alt="Career Compass AI" loading="lazy"
-                                class="w-full h-full object-cover">
+                            <img src="assets/images/Career_compass_AI.png" alt="Career Compass AI Dashboard"
+                                loading="lazy"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <!-- Content -->
                         <div class="p-8">
-                            <h3 class="text-2xl font-bold text-white mb-3 tracking-tight">Career Compass AI</h3>
+                            <h3
+                                class="text-2xl font-bold text-gray-200 group-hover:text-white transition-colors mb-3 tracking-tight">
+                                Career Compass AI</h3>
                             <p class="text-gray-400 text-[14px] leading-[1.8] mb-8 min-h-[50px]">
                                 AI-powered career guidance using Gemini AI to map student skills to industry demands.
                             </p>
                             <!-- Tags -->
-                            <div class="flex flex-wrap gap-2">
+                            <div class="flex flex-wrap gap-2 mb-8">
                                 <span
                                     class="px-3 py-1.5 bg-[#12141c] border border-[#1f222e] text-gray-300 text-[11px] font-mono rounded-sm">React</span>
                                 <span
                                     class="px-3 py-1.5 bg-[#12141c] border border-[#1f222e] text-gray-300 text-[11px] font-mono rounded-sm">Gemini
                                     Pro</span>
                             </div>
+                            <!-- Links -->
+                            <div class="flex items-center gap-6 relative z-10">
+                                <button
+                                    onclick="window.open('https://github.com/devrajpoot2903-del/career-compass-ai', '_blank'); event.preventDefault(); event.stopPropagation();"
+                                    aria-label="GitHub Repository for Career Compass AI"
+                                    class="text-gray-300 hover:text-white flex items-center gap-1.5 text-[13px] font-semibold transition-colors cursor-pointer group/btn focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded">
+                                    GitHub
+                                    <svg class="w-4 h-4 group-hover/btn:scale-110 transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </a>
 
                 </div>
 
@@ -471,13 +531,14 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                     <!-- Project 3: Jarvis -->
-                    <div
-                        class="bg-[#0c0d11] border border-[#1f222e] rounded-xl relative overflow-hidden group hover:border-[#33384a] transition-colors flex flex-col justify-between">
+                    <a href="https://github.com/devrajpoot2903-del/Jarvis_Mark_1_Stable" target="_blank"
+                        rel="noopener noreferrer"
+                        class="block bg-[#0c0d11] border border-[#1f222e] rounded-xl relative overflow-hidden group hover:border-white/20 hover:-translate-y-3 hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(255,255,255,0.05)] transition-all duration-300 ease-out flex flex-col justify-between cursor-pointer z-10 hover:z-20">
 
                         <!-- Image Container -->
                         <div class="relative h-[200px] overflow-hidden border-b border-[#1f222e]">
-                            <img src="assets/images/Jarvis.png" alt="Jarvis Desktop Assistant" loading="lazy"
-                                class="w-full h-full object-cover">
+                            <img src="assets/images/Jarvis.png" alt="Jarvis Desktop Assistant Interface" loading="lazy"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
 
                         <div class="p-8 flex flex-col justify-between flex-1 relative">
@@ -485,7 +546,7 @@
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-emerald-400"></div>
 
                             <div>
-                                <div class="flex items-center justify-between mb-8">
+                                <div class="flex items-center justify-between mb-8 relative z-10">
                                     <div class="text-emerald-400">
                                         <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -497,20 +558,21 @@
                                             <path d="M9 13v2" />
                                         </svg>
                                     </div>
-                                    <a href="https://github.com/devrajpoot2903-del/Jarvis_Mark_1_Stable" target="_blank"
-                                        rel="noopener noreferrer" title="GitHub"
-                                        class="w-10 h-10 rounded border border-[#1f222e] flex items-center justify-center text-gray-400 hover:text-white hover:border-white/30 transition-colors">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                            stroke-width="2.5">
+                                    <button
+                                        onclick="window.open('https://github.com/devrajpoot2903-del/Jarvis_Mark_1_Stable', '_blank'); event.preventDefault(); event.stopPropagation();"
+                                        title="GitHub" aria-label="GitHub Repository for Jarvis"
+                                        class="w-10 h-10 rounded border border-[#1f222e] flex items-center justify-center text-gray-400 hover:text-white hover:border-white/30 transition-colors cursor-pointer group/btn focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400">
+                                        <svg class="w-4 h-4 group-hover/btn:scale-110 transition-transform duration-300"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                                         </svg>
-                                    </a>
+                                    </button>
                                 </div>
 
-                                <h3 class="text-[22px] font-bold text-white mb-3 tracking-tight">Jarvis Desktop
-                                    Assistant
-                                </h3>
+                                <h3
+                                    class="text-[22px] font-bold text-gray-200 group-hover:text-white transition-colors mb-3 tracking-tight">
+                                    Jarvis Desktop Assistant</h3>
                                 <p class="text-gray-400 text-[14px] leading-[1.8] mb-8">
                                     Personalized Python-based voice assistant featuring speech recognition and
                                     automation
@@ -522,16 +584,16 @@
                                 PYTHON • SPEECH REC • OS-LIB
                             </div>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Project 4: Netflix Clone -->
-                    <div
-                        class="bg-[#0c0d11] border border-[#1f222e] rounded-xl relative overflow-hidden group hover:border-[#33384a] transition-colors flex flex-col justify-between">
+                    <a href="https://netflix-ui-clone-mauve.vercel.app/" target="_blank" rel="noopener noreferrer"
+                        class="block bg-[#0c0d11] border border-[#1f222e] rounded-xl relative overflow-hidden group hover:border-white/20 hover:-translate-y-3 hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(255,255,255,0.05)] transition-all duration-300 ease-out flex flex-col justify-between cursor-pointer z-10 hover:z-20">
 
                         <!-- Image Container -->
                         <div class="relative h-[200px] overflow-hidden border-b border-[#1f222e]">
-                            <img src="assets/images/NetFlix-clone.png" alt="Netflix Clone" loading="lazy"
-                                class="w-full h-full object-cover">
+                            <img src="assets/images/NetFlix-clone.png" alt="Netflix Clone Landing Page" loading="lazy"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
 
                         <div class="p-8 flex flex-col justify-between flex-1 relative">
@@ -539,7 +601,7 @@
                             <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-400"></div>
 
                             <div>
-                                <div class="flex items-center justify-between mb-8">
+                                <div class="flex items-center justify-between mb-8 relative z-10">
                                     <div class="text-blue-400">
                                         <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -547,18 +609,21 @@
                                             <polyline points="17 2 12 7 7 2" />
                                         </svg>
                                     </div>
-                                    <a href="https://netflix-ui-clone-mauve.vercel.app/" target="_blank"
-                                        rel="noopener noreferrer" title="Live Demo"
-                                        class="w-10 h-10 rounded border border-[#1f222e] flex items-center justify-center text-gray-400 hover:text-white hover:border-white/30 transition-colors">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                            stroke-width="2.5">
+                                    <button
+                                        onclick="window.open('https://netflix-ui-clone-mauve.vercel.app/', '_blank'); event.preventDefault(); event.stopPropagation();"
+                                        title="Live Demo" aria-label="Live Demo for Netflix Clone"
+                                        class="w-10 h-10 rounded border border-[#1f222e] flex items-center justify-center text-gray-400 hover:text-white hover:border-white/30 transition-colors cursor-pointer group/btn focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">
+                                        <svg class="w-4 h-4 group-hover/btn:translate-x-[3px] group-hover/btn:-translate-y-[3px] transition-transform duration-300"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="M7 17L17 7M17 7H7M17 7V17"></path>
                                         </svg>
-                                    </a>
+                                    </button>
                                 </div>
 
-                                <h3 class="text-[22px] font-bold text-white mb-3 tracking-tight">Netflix Clone</h3>
+                                <h3
+                                    class="text-[22px] font-bold text-gray-200 group-hover:text-white transition-colors mb-3 tracking-tight">
+                                    Netflix Clone</h3>
                                 <p class="text-gray-400 text-[14px] leading-[1.8] mb-8">
                                     Pixel-perfect landing page clone showcasing mastery of modern CSS architectures and
                                     responsive design patterns.
@@ -569,7 +634,7 @@
                                 HTML5 • CSS3 • JAVASCRIPT
                             </div>
                         </div>
-                    </div>
+                    </a>
 
                 </div>
 
@@ -614,45 +679,82 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
 
                             <!-- Certification 1 -->
-                            <div
-                                class="bg-[#0c0d11] p-6 rounded flex flex-col justify-between border border-[#1f222e] hover:border-[#33384a] transition-colors">
-                                <div
-                                    class="w-10 h-10 rounded bg-[#10241b] text-emerald-400 flex items-center justify-center mb-8">
-                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                        <path
-                                            d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
-                                        <path d="m9 12 2 2 4-4" />
-                                    </svg>
-                                </div>
+                            <a href="https://drive.google.com/file/d/1FY8ZhYqsYLrEI3Wl8465b2_AUE1Mz_dX/view?usp=sharing"
+                                target="_blank" rel="noopener noreferrer"
+                                class="bg-[#0c0d11] p-6 rounded flex flex-col h-full border border-[#1f222e] hover:border-[#33384a] transition-colors group">
                                 <div>
-                                    <h3 class="text-[15px] font-bold text-white mb-2 tracking-wide">NPTEL Certification
+                                    <div
+                                        class="w-10 h-10 rounded bg-[#10241b] text-emerald-400 flex items-center justify-center mb-6">
+                                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+                                            <path d="m9 12 2 2 4-4" />
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-[17px] font-bold text-white mb-5 tracking-wide">NPTEL Certifications
                                     </h3>
-                                    <p class="font-mono text-[9px] font-bold tracking-widest text-gray-400 uppercase">
-                                        PROGRAMMING & ALGORITHMS
-                                    </p>
+
+                                    <div class="space-y-4 mb-8">
+                                        <div>
+                                            <div class="text-[14px] text-gray-200 font-medium mb-1">&bull; Programming
+                                                in Java</div>
+                                            <div class="text-[12px] text-gray-500 pl-3">IIT Kharagpur (NPTEL)</div>
+                                        </div>
+                                        <div>
+                                            <div class="text-[14px] text-gray-200 font-medium mb-1">&bull; Python in
+                                                Data Science</div>
+                                            <div class="text-[12px] text-gray-500 pl-3">IIT Madras (NPTEL)</div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+
+                                <div class="flex items-center justify-between border-t border-[#1f222e] pt-4 mt-auto">
+                                    <span
+                                        class="font-mono text-[9px] font-bold tracking-widest text-emerald-400 uppercase">2
+                                        Certifications</span>
+                                    <span
+                                        class="text-[12px] text-gray-400 font-semibold group-hover:text-white transition-colors">View
+                                        All &rarr;</span>
+                                </div>
+                            </a>
 
                             <!-- Certification 2 -->
-                            <div
-                                class="bg-[#0c0d11] p-6 rounded flex flex-col justify-between border border-[#1f222e] hover:border-[#33384a] transition-colors">
-                                <div
-                                    class="w-10 h-10 rounded bg-[#161821] text-[#8295ff] flex items-center justify-center mb-8">
-                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                                        <path d="M6 12v5c3 3 9 3 12 0v-5" />
-                                    </svg>
-                                </div>
+                            <a href="https://drive.google.com/file/d/1E2UQ8ZnCcEKvwEFFNDebIMIaXXXww_Vr/view?usp=sharing"
+                                target="_blank" rel="noopener noreferrer"
+                                class="bg-[#0c0d11] p-6 rounded flex flex-col h-full border border-[#1f222e] hover:border-[#33384a] transition-colors group">
                                 <div>
-                                    <h3 class="text-[15px] font-bold text-white mb-2 tracking-wide">Infosys Springboard
+                                    <div
+                                        class="w-10 h-10 rounded bg-[#161821] text-[#8295ff] flex items-center justify-center mb-6">
+                                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                            <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-[17px] font-bold text-white mb-5 tracking-wide">Infosys Springboard
                                     </h3>
-                                    <p class="font-mono text-[9px] font-bold tracking-widest text-gray-400 uppercase">
-                                        FULL STACK FOUNDATIONS
-                                    </p>
+
+                                    <div class="space-y-4 mb-8">
+                                        <div>
+                                            <div class="text-[14px] text-gray-200 font-medium">&bull; HTML5 &ndash; The
+                                                Language</div>
+                                        </div>
+                                        <div>
+                                            <div class="text-[14px] text-gray-200 font-medium">&bull; CSS3</div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+
+                                <div class="flex items-center justify-between border-t border-[#1f222e] pt-4 mt-auto">
+                                    <span
+                                        class="font-mono text-[9px] font-bold tracking-widest text-[#8295ff] uppercase">2
+                                        Certifications</span>
+                                    <span
+                                        class="text-[12px] text-gray-400 font-semibold group-hover:text-white transition-colors">View
+                                        All &rarr;</span>
+                                </div>
+                            </a>
 
                         </div>
                     </div>
@@ -685,12 +787,14 @@
                     </p>
 
                     <div class="flex flex-wrap items-center gap-8">
-                        <a href="mailto:devrajpoot2903@gmail.com"
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=devrajpoot2903@gmail.com" target="_blank"
                             class="px-8 py-3.5 bg-accent hover:bg-accentHover text-[#0d0e12] font-semibold tracking-wide rounded text-[14px] transition-colors">
                             Let's Talk
                         </a>
                         <div class="flex items-center gap-5 text-gray-400">
-                            <a href="mailto:devrajpoot2903@gmail.com" class="hover:text-white transition-colors"
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=devrajpoot2903@gmail.com"
+                                target="_blank" aria-label="Email Me"
+                                class="hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
                                 title="Email">
                                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -699,7 +803,9 @@
                                 </svg>
                             </a>
                             <a href="https://www.linkedin.com/in/dev-rajpoot-98086a320/" target="_blank"
-                                rel="noopener noreferrer" class="hover:text-white transition-colors" title="LinkedIn">
+                                rel="noopener noreferrer"
+                                class="hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
+                                aria-label="LinkedIn Profile" title="LinkedIn">
                                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
@@ -707,7 +813,8 @@
                                 </svg>
                             </a>
                             <a href="https://github.com/devrajpoot2903-del" target="_blank" rel="noopener noreferrer"
-                                class="hover:text-white transition-colors" title="GitHub">
+                                class="hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
+                                aria-label="GitHub Profile" title="GitHub">
                                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                                     <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
@@ -739,7 +846,8 @@
                     class="hover:text-white transition-colors">LinkedIn</a>
                 <a href="https://github.com/devrajpoot2903-del" target="_blank" rel="noopener noreferrer"
                     class="hover:text-white transition-colors">GitHub</a>
-                <a href="mailto:devrajpoot2903@gmail.com" class="hover:text-white transition-colors">Email</a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=devrajpoot2903@gmail.com" target="_blank"
+                    class="hover:text-white transition-colors">Email</a>
             </div>
         </div>
     </footer>

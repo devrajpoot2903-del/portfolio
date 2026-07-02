@@ -162,11 +162,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 scrollTrigger: { trigger: "#education", start: "top 80%", once: true },
                 opacity: 0, y: 40, duration: 0.8, ease: "expo.out"
             });
-            const certCards = gsap.utils.toArray("#education .grid.grid-cols-1.sm\\:grid-cols-2 > div");
-            gsap.from(certCards, { // Cards sequential
-                scrollTrigger: { trigger: "#education .grid.grid-cols-1.sm\\:grid-cols-2", start: "top 80%", once: true },
-                opacity: 0, y: 40, duration: 0.8, stagger: 0.15, ease: "expo.out"
-            });
+            const certCards = gsap.utils.toArray("#education .grid.grid-cols-1.sm\\:grid-cols-2 > a");
+            if (certCards.length > 0) {
+                gsap.from(certCards, { // Cards sequential
+                    scrollTrigger: { trigger: "#education .grid.grid-cols-1.sm\\:grid-cols-2", start: "top 80%", once: true },
+                    opacity: 0, y: 40, duration: 0.8, stagger: 0.15, ease: "expo.out"
+                });
+            }
         }
 
         // 6. Footer: Simple fade
