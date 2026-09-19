@@ -482,12 +482,16 @@
                     </a>
 
                     <!-- Project 2: Career Compass AI -->
-                    <a href="https://github.com/devrajpoot2903-del/career-compass-ai" target="_blank"
+                    <a href="https://career-compass-ai-pink.vercel.app/" target="_blank"
                         rel="noopener noreferrer"
                         class="block bg-[#0c0d11] border border-[#1f222e] rounded-xl overflow-hidden group hover:border-white/20 hover:-translate-y-3 hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(255,255,255,0.05)] transition-all duration-300 ease-out relative cursor-pointer z-10 hover:z-20">
                         <!-- Image Container -->
                         <div
                             class="relative h-[280px] md:h-[320px] bg-[#12141c] overflow-hidden border-b border-[#1f222e]">
+                            <div
+                                class="absolute top-5 left-5 z-10 bg-emerald-400 text-[#0c0d11] text-[10px] font-bold tracking-widest px-3 py-1 rounded-full uppercase">
+                                Active
+                            </div>
                             <img src="assets/images/Career_compass_AI.png" alt="Career Compass AI Dashboard"
                                 loading="lazy"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -511,9 +515,20 @@
                             <!-- Links -->
                             <div class="flex items-center gap-6 relative z-10">
                                 <button
+                                    onclick="window.open('https://career-compass-ai-pink.vercel.app/', '_blank'); event.preventDefault(); event.stopPropagation();"
+                                    aria-label="Live Demo for Career Compass AI"
+                                    class="text-gray-300 hover:text-white flex items-center gap-1.5 text-[13px] font-semibold transition-colors cursor-pointer group/btn focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded">
+                                    Live Demo
+                                    <svg class="w-3.5 h-3.5 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M7 17L17 7M17 7H7M17 7V17"></path>
+                                    </svg>
+                                </button>
+                                <button
                                     onclick="window.open('https://github.com/devrajpoot2903-del/career-compass-ai', '_blank'); event.preventDefault(); event.stopPropagation();"
                                     aria-label="GitHub Repository for Career Compass AI"
-                                    class="text-gray-300 hover:text-white flex items-center gap-1.5 text-[13px] font-semibold transition-colors cursor-pointer group/btn focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded">
+                                    class="text-gray-300 hover:text-white flex items-center gap-1.5 text-[13px] font-semibold transition-colors cursor-pointer group/btn focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded">
                                     GitHub
                                     <svg class="w-4 h-4 group-hover/btn:scale-110 transition-transform duration-300"
                                         fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
@@ -641,8 +656,29 @@
             </div>
         </section>
 
+        <!-- Experience Section -->
+        <section id="experience" class="py-24 bg-[#12141c] relative z-10 border-t border-[#1f222e]/50">
+            <div class="max-w-6xl mx-auto px-6">
+
+                <!-- Section Header -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+                    <div>
+                        <h2 class="text-[34px] md:text-5xl font-bold text-white mb-3 tracking-tight">Experience</h2>
+                        <p class="text-gray-400 text-[14px] md:text-[15px]">Professional roles and internships.</p>
+                    </div>
+                    <div class="font-mono text-gray-500 text-[11px] font-bold tracking-widest uppercase">
+                        WORK EXPERIENCE
+                    </div>
+                </div>
+
+                <!-- Dynamically rendered by js/renderContent.js -->
+                <div id="experience-container"></div>
+
+            </div>
+        </section>
+
         <!-- Education & Certifications Section -->
-        <section id="education" class="py-24 bg-[#1a1d27] relative z-10 border-t border-[#1f222e]/50">
+        <section id="education" class="py-24 bg-[#09090b] relative z-10 border-t border-[#1f222e]/50">
             <div class="max-w-6xl mx-auto px-6">
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-8">
@@ -676,87 +712,8 @@
                         <h2 class="text-[32px] md:text-4xl font-bold text-white mb-10 tracking-tight">Certifications
                         </h2>
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-
-                            <!-- Certification 1 -->
-                            <a href="https://drive.google.com/file/d/1FY8ZhYqsYLrEI3Wl8465b2_AUE1Mz_dX/view?usp=sharing"
-                                target="_blank" rel="noopener noreferrer"
-                                class="bg-[#0c0d11] p-6 rounded flex flex-col h-full border border-[#1f222e] hover:border-[#33384a] transition-colors group">
-                                <div>
-                                    <div
-                                        class="w-10 h-10 rounded bg-[#10241b] text-emerald-400 flex items-center justify-center mb-6">
-                                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                            <path
-                                                d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
-                                            <path d="m9 12 2 2 4-4" />
-                                        </svg>
-                                    </div>
-                                    <h3 class="text-[17px] font-bold text-white mb-5 tracking-wide">NPTEL Certifications
-                                    </h3>
-
-                                    <div class="space-y-4 mb-8">
-                                        <div>
-                                            <div class="text-[14px] text-gray-200 font-medium mb-1">&bull; Programming
-                                                in Java</div>
-                                            <div class="text-[12px] text-gray-500 pl-3">IIT Kharagpur (NPTEL)</div>
-                                        </div>
-                                        <div>
-                                            <div class="text-[14px] text-gray-200 font-medium mb-1">&bull; Python in
-                                                Data Science</div>
-                                            <div class="text-[12px] text-gray-500 pl-3">IIT Madras (NPTEL)</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="flex items-center justify-between border-t border-[#1f222e] pt-4 mt-auto">
-                                    <span
-                                        class="font-mono text-[9px] font-bold tracking-widest text-emerald-400 uppercase">2
-                                        Certifications</span>
-                                    <span
-                                        class="text-[12px] text-gray-400 font-semibold group-hover:text-white transition-colors">View
-                                        All &rarr;</span>
-                                </div>
-                            </a>
-
-                            <!-- Certification 2 -->
-                            <a href="https://drive.google.com/file/d/1E2UQ8ZnCcEKvwEFFNDebIMIaXXXww_Vr/view?usp=sharing"
-                                target="_blank" rel="noopener noreferrer"
-                                class="bg-[#0c0d11] p-6 rounded flex flex-col h-full border border-[#1f222e] hover:border-[#33384a] transition-colors group">
-                                <div>
-                                    <div
-                                        class="w-10 h-10 rounded bg-[#161821] text-[#8295ff] flex items-center justify-center mb-6">
-                                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                                            <path d="M6 12v5c3 3 9 3 12 0v-5" />
-                                        </svg>
-                                    </div>
-                                    <h3 class="text-[17px] font-bold text-white mb-5 tracking-wide">Infosys Springboard
-                                    </h3>
-
-                                    <div class="space-y-4 mb-8">
-                                        <div>
-                                            <div class="text-[14px] text-gray-200 font-medium">&bull; HTML5 &ndash; The
-                                                Language</div>
-                                        </div>
-                                        <div>
-                                            <div class="text-[14px] text-gray-200 font-medium">&bull; CSS3</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="flex items-center justify-between border-t border-[#1f222e] pt-4 mt-auto">
-                                    <span
-                                        class="font-mono text-[9px] font-bold tracking-widest text-[#8295ff] uppercase">2
-                                        Certifications</span>
-                                    <span
-                                        class="text-[12px] text-gray-400 font-semibold group-hover:text-white transition-colors">View
-                                        All &rarr;</span>
-                                </div>
-                            </a>
-
-                        </div>
+                        <!-- Dynamically rendered by js/renderContent.js -->
+                        <div id="certificates-container" class="grid grid-cols-1 sm:grid-cols-2 gap-5"></div>
                     </div>
 
                 </div>
@@ -852,9 +809,43 @@
         </div>
     </footer>
 
+    <!-- Global Certificate / LOR Modal -->
+    <div
+        id="cert-modal"
+        class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cert-modal-title">
+
+        <div class="relative max-w-3xl w-full mx-4">
+            <!-- Close Button -->
+            <button
+                id="cert-modal-close"
+                class="absolute -top-10 right-0 text-gray-400 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
+                aria-label="Close certificate viewer">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+
+            <!-- Title -->
+            <p id="cert-modal-title" class="text-[11px] font-mono font-bold tracking-widest text-accent uppercase mb-3 truncate"></p>
+
+            <!-- Image -->
+            <img
+                id="cert-modal-img"
+                src=""
+                alt=""
+                class="w-full h-auto rounded-lg border border-[#1f222e] shadow-2xl object-contain max-h-[80vh]">
+        </div>
+    </div>
+
     <!-- Animation Libraries (Phase 4.1) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Data & Rendering Layer (ES Module — runs deferred, before DOMContentLoaded listeners) -->
+    <script type="module" src="js/renderContent.js"></script>
 
     <!-- JS Files -->
     <script src="js/animations.js"></script>
